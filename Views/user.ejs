@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>User</title>
+</head>
+
+<body>
+    <div>
+        <h1>User with id =
+            <%= user[0].id %> :
+        </h1>
+    </div>
+    <div>
+        <div>
+            <div style="display: flex; align-items: center;">
+                <h3>Name: </h3>
+                <p style="margin-left: 5px;">
+                    <%= user[0].username %>
+                </p>
+            </div>
+            <div style="display: flex;align-items: center;">
+                <h3>Surname: </h3>
+                <p style="margin-left: 5px;">
+                    <%= user[0].surname %>
+                </p>
+            </div>
+            <div style="display: flex;align-items: center;">
+                <h3>Email: </h3>
+                <p style="margin-left: 5px;">
+                    <%= user[0].email %>
+                </p>
+            </div>
+        </div>
+        <br><br>
+        <div style="display: flex;">
+
+
+            <form action="/user/edit/<%= user[0].id %>">
+                <button style="cursor: pointer;border: 0; border-radius: 5px 0 0 5px; height: 30px; width: 100px;">Edit</button>
+            </form>
+            <form action="/user/delete/<%= user[0].id %>" method="GET">
+                <button style="cursor: pointer;background-color: red;color: white; border: 0; width: 100px; height: 30px;border-radius: 0 5px 5px 0;">Delete</button>
+            </form>
+        </div>
+    </div>
+    <div>
+        <form action="/users">
+            <button style="cursor: pointer;width: 100px; height: 30px; border: 1px solid green; border-radius: 5px;">Go Home</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>All users</title>
+</head>
+
+<body>
+    <h1>All
+        <%= params.length %> users:
+    </h1>
+    <hr>
+
+    <div>
+
+        <% for (var i = 0; i <= params.length-1 ; i++) { %>
+            <%= params[i].username %> |
+                <%= params[i].surname %> |
+                    <%= params[i].email %>
+
+                        <br><br>
+                        <div style="display: flex;">
+                            <form action="/user/edit/<%= params[i].id %>">
+                                <button style="cursor: pointer;border: 0; border-radius: 5px 0 0 5px; height: 30px; width: 100px;">Edit</button>
+                            </form>
+                            <form action="/user/delete/<%= params[i].id %>" method="GET">
+                                <button style="cursor: pointer;background-color: red;color: white; border: 0; width: 100px; height: 30px;border-radius: 0;">Delete</button>
+                            </form>
+                            <form action="/user/<%= params[i].id %>">
+                                <button style="cursor: pointer;background-color: blue;color: white; border: 0; width: 100px; height: 30px;border-radius: 0 5px 5px 0;">See profile</button>
+                            </form>
+
+                        </div>
+                        <hr>
+                        <% } %>
+
+    </div>
+    <form action="/user/add">
+        <button style="cursor: pointer;background-color: green; border-radius: 3px; border: 0; color: white; height: 40px;width: 100px;">Add user</button>
+    </form>
+
+
+</body>
+
+</html>

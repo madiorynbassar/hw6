@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Update user</title>
+</head>
+
+<body>
+    <form action="/user/edit/<%= edit[0].id %>" method="POST">
+        <input type="text" name="update_name" value="<%= edit[0].username %>">
+        <input type="text" name="update_surname" value="<%= edit[0].surname %>">
+        <input type="text" name="update_email" value="<%= edit[0].email %>">
+        <button style="background-color: green;color: white; border: 0; width: 100px; height: 30px; border-radius: 5px;">Update</button>
+    </form>
+    <div>
+        <form action="/users">
+            <button style="cursor: pointer;width: 100px; height: 30px; border: 1px solid green; border-radius: 5px;">Go Home</button>
+        </form>
+    </div>
+</body>
+
+</html>
