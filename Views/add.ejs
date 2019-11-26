@@ -1,8 +1,7 @@
 <html>
 
 <head>
-    <title>Registration</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Students</title>
 
 </head>
 
@@ -10,28 +9,28 @@
     <div class="container-fluid">
         <form action="/user/add" method="POST">
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Name: </label>
-                <div class="col-sm-6">
+                <label>Name: </label>
+                <div >
                     <input type="text" class="form-control" name="user_name" placeholder="Enter Name" required>
                 </div>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Surname: </label>
+            <div >
+                <label >Surname: </label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="user_surname" placeholder="Enter Surname" required>
                 </div>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Email: </label>
-                <div class="col-sm-6">
+            <div >
+                <label >Email: </label>
+                <div >
                     <input type="email" class="form-control" name="user_email" placeholder="Enter E-mail" required>
                 </div>
             </div>
-            <button class="btn btn-success">Add user</button>
+            <button >Add user</button>
         </form>
         <div>
             <form action="/users">
-                <button style="cursor: pointer;width: 100px; height: 30px; border: 1px solid green; border-radius: 5px;">Go Home</button>
+                <button style="cursor: pointer">Go Home</button>
             </form>
         </div>
     </div>
